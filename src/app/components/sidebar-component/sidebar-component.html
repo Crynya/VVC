@@ -1,6 +1,55 @@
 
 <aside class="filters">
   <h3>Ma recherche</h3>
-  <div class="filter-box">Zone filtres</div>
-  <div class="filter-box">Autres filtres</div>
+  <form (ngSubmit)="applyFilters()" #filterForm="ngForm">
+
+    <!-- Marque -->
+    <div class="filter-box">
+      <label for="brand">Marque :</label>
+      <select id="brand" [(ngModel)]="filters.brand" name="brand">
+        <option value="">Toutes</option>
+        <option *ngFor="let brand of brands" [value]="brand">{{ brand }}</option>
+      </select>
+    </div>
+
+    <!-- Prix min / max -->
+    <div class="filter-box">
+      <label>Prix max :</label>
+      <input type="number" [(ngModel)]="filters.priceMax" name="priceMax" />
+    </div>
+
+    <!-- Kilométrage max -->
+    <div class="filter-box">
+      <label>Kilométrage max :</label>
+      <input type="number" [(ngModel)]="filters.kmMax" name="kmMax" />
+    </div>
+
+    <!-- Carburant -->
+    <div class="filter-box radio-group">
+      <label>Carburant :</label>
+      <div class="radio-item">
+        <input type="radio" [(ngModel)]="filters.fuel" name="fuel" value="Essence" />
+        <span>Essence</span>
+      </div>
+      <div class="radio-item">
+        <input type="radio" [(ngModel)]="filters.fuel" name="fuel" value="Diesel" />
+        <span>Diesel</span>
+      </div>
+    </div>
+
+    <!-- Année min -->
+    <div class="filter-box">
+      <label>Année min :</label>
+      <input type="number" [(ngModel)]="filters.yearMin" name="yearMin" />
+    </div>
+
+    <!-- Bouton -->
+    <button type="submit">Rechercher</button>
+
+    <!-- Lien Réinitialiser -->
+    <div class="reset-link">
+      <a href="#" (click)="resetFilters(); $event.preventDefault()">Réinitialiser tous les filtres</a>
+    </div>
+
+  </form>
 </aside>

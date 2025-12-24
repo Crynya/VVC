@@ -1,7 +1,7 @@
 
 
 <div class="main-container">
-  <app-sidebar-component></app-sidebar-component>
+  <app-sidebar-component (filtersChanged)="loadCars($event)"></app-sidebar-component>
   <section class="car-list">
     <h2>Mes annonces</h2>
     <div *ngFor="let car of cars$ | async">

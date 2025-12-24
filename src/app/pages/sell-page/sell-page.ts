@@ -16,6 +16,10 @@ import { Observable } from 'rxjs';
 export class SellPage {
   cars$: Observable<Car[]>;
 
+  loadCars(filters?: any) {
+    this.cars$ = this.carService.getAllCars(filters);
+  }
+
   constructor(private carService: CarsServices) {
     this.cars$ = this.carService.getAllCars();
   }
