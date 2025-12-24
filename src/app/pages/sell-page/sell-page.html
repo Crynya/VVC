@@ -1,11 +1,13 @@
 
+
 <div class="main-container">
   <app-sidebar-component></app-sidebar-component>
   <section class="car-list">
     <h2>Mes annonces</h2>
-    <app-car-component></app-car-component>
-    <app-car-component></app-car-component>
-    <app-car-component></app-car-component>
+    <div *ngFor="let car of cars$ | async">
+      <app-car-component [car]="car"></app-car-component>
+    </div>
   </section>
 </div>
-``
+
+

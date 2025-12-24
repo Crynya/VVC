@@ -5,5 +5,5 @@ import { SellPage } from './pages/sell-page/sell-page';
 export const appRoutes: Routes = [
   { path: '', redirectTo: 'sell', pathMatch: 'full' },
   { path: 'sell', component: SellPage },
-  { path: 'info', component: SellPage } // temporaire, même page pour test
+  { path: 'info', component: SellPage },
 ];

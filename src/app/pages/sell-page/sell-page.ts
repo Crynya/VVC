@@ -1,16 +1,22 @@
+
 import { Component } from '@angular/core';
-import {CarComponent} from '../../components/car-component/car-component';
-import {SidebarComponent} from '../../components/sidebar-component/sidebar-component';
+import { CarComponent } from '../../components/car-component/car-component';
+import { SidebarComponent } from '../../components/sidebar-component/sidebar-component';
+import { CarsServices, Car } from '../../services/cars-services/cars-services';
+import { CommonModule } from '@angular/common';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-sell-page',
-  imports: [
-    CarComponent,
-    SidebarComponent
-  ],
+  standalone: true,
+  imports: [CarComponent, SidebarComponent, CommonModule],
   templateUrl: './sell-page.html',
-  styleUrl: './sell-page.css',
+  styleUrls: ['./sell-page.css']
 })
 export class SellPage {
+  cars$: Observable<Car[]>;
 
+  constructor(private carService: CarsServices) {
+    this.cars$ = this.carService.getAllCars();
+  }
 }

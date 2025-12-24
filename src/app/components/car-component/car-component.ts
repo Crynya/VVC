@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Car} from '../../services/cars-services/cars-services';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-car-component',
@@ -7,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './car-component.css',
 })
 export class CarComponent {
-
+  @Input() car!: Car;
+  protected readonly environment = environment;
 }
