@@ -12,12 +12,20 @@
         <div class="car-main-info">
           <h1>{{ car.brand }} {{ car.model }}</h1>
           <p class="price">€{{ car.price }}</p>
-          <!-- bouton permettant d'acceder a la carte-->
-          <button class="visit-button" (click)="openGoogleMaps(car.location)">
-            Lieu de visite
-          </button>
+          <!-- Info sur le centre-->
+          <div *ngIf="centre$ | async as centre" class="centre-info">
+            <h3>Centre de visite</h3>
+            <p><strong>Nom :</strong> {{ centre.name }}</p>
+            <p><strong>Téléphone :</strong> <a [href]="'tel:' + centre.numeroTel">{{ centre.numeroTel }}</a></p>
+            <p><strong>Horaire :</strong> {{ centre.horaire }}</p>
 
-        </div>
+            <!-- bouton permettant d'acceder a la carte-->
+            <button class="visit-button" (click)="openGoogleMaps(centre)">
+              Lieu de visite
+            </button>
+            </div>
+
+          </div>
       </div>
 
       <!-- Infos générales -->
