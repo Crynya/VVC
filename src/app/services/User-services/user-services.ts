@@ -8,22 +8,18 @@ import {environment} from '../../../environments/environment';
   providedIn: 'root',
 })
 export class UserServices {
-  private apiUrl = `${environment.User_API}/UserController`;
+  private apiUrl = `${environment.User_API}/User`;
 
   constructor(private http: HttpClient) {}
 
-  login(email: string, password: string): Observable<User | null> {
-    return this.http.get<User[]>(`${this.apiUrl}/users`).pipe(
-      map(users => {
-        const user = users.find(u => u.email === email && u.password === password);
-        return user || null;
-      })
-    );
+  login(email: string, password: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/login`, { email, password });
   }
 
-  createUser(user: User): Observable<User> {
-    return this.http.post<User>(`${this.apiUrl}/users`, user);
+  register(user: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/users`, user);
   }
+
 
 
 }

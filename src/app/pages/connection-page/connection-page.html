@@ -1,1 +1,16 @@
-<p>connection-page works!</p>
+
+<app-header-connection-component (roleChanged)="role = $event"></app-header-connection-component>
+
+<div *ngIf="role === 'Admin'" class="admin-container">
+  <app-connection-user-component [role]="role" (onLogin)="handleLogin($event)"></app-connection-user-component>
+</div>
+
+<div *ngIf="role === 'User'" class="user-container">
+  <div class="left">
+    <app-connection-user-component [role]="role" (onLogin)="handleLogin($event)"></app-connection-user-component>
+  </div>
+  <div class="right">
+    <app-create-user-component (onRegister)="handleRegister($event)"></app-create-user-component>
+  </div>
+
+</div>

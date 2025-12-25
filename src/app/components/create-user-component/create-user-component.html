@@ -1,1 +1,8 @@
-<p>create-user-component works!</p>
+<div>
+  <h3>Créer un compte</h3>
+  <input [(ngModel)]="nom" placeholder="Nom" />
+  <input [(ngModel)]="prenom" placeholder="Prénom" />
+  <input [(ngModel)]="email" placeholder="Email" />
+  <input [(ngModel)]="password" type="password" placeholder="Mot de passe" />
+  <button (click)="register()">Créer</button>
+</div>

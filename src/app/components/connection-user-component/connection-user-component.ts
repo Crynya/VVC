@@ -1,11 +1,25 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+
 
 @Component({
   selector: 'app-connection-user-component',
-  imports: [],
+  standalone: true,
+  imports: [FormsModule,],
   templateUrl: './connection-user-component.html',
-  styleUrl: './connection-user-component.css',
+  styleUrls: ['./connection-user-component.css'],
 })
 export class ConnectionUserComponent {
+
+  @Input() role: string = 'User';
+  @Output() onLogin = new EventEmitter<{ email: string; password: string }>();
+
+  email = '';
+  password = '';
+
+  login() {
+    this.onLogin.emit({ email: this.email, password: this.password });
+  }
+
 
 }

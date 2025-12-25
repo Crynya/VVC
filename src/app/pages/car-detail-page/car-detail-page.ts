@@ -8,11 +8,12 @@ import {environment} from '../../../environments/environment';
 import {CentreService} from '../../services/centre-services/centre-services';
 import {Car} from '../../models/car-model';
 import {Centre} from '../../models/centre-model';
+import {HeaderComponent} from '../../components/header-component/header-component';
 
 @Component({
   selector: 'app-car-detail-page',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, HeaderComponent],
   templateUrl: './car-detail-page.html',
   styleUrls: ['./car-detail-page.css']
 })

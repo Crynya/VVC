@@ -1,1 +1,6 @@
-<p>connection-user-component works!</p>
+<div>
+  <h3>Se connecter ({{ role }})</h3>
+  <input [(ngModel)]="email" placeholder="Email" />
+  <input [(ngModel)]="password" type="password" placeholder="Mot de passe" />
+  <button (click)="login()">Connexion</button>
+</div>

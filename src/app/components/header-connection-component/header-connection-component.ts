@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header-connection-component',
@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './header-connection-component.css',
 })
 export class HeaderConnectionComponent {
+  @Output() roleChanged = new EventEmitter<string>();
+  selectedRole = 'User';
+
+  onRoleChange(role: string) {
+    this.selectedRole = role;
+    this.roleChanged.emit(role);
+  }
+
 
 }

@@ -6,11 +6,12 @@ import { CarsServices} from '../../services/cars-services/cars-services';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import {Car} from '../../models/car-model';
+import {HeaderComponent} from '../../components/header-component/header-component';
 
 @Component({
   selector: 'app-sell-page',
   standalone: true,
-  imports: [CarComponent, SidebarComponent, CommonModule],
+  imports: [CarComponent, SidebarComponent, CommonModule, HeaderComponent],
   templateUrl: './sell-page.html',
   styleUrls: ['./sell-page.css']
 })
