@@ -21,7 +21,7 @@
 
             <!-- bouton permettant d'acceder a la carte-->
             <button class="visit-button" (click)="openGoogleMaps(centre)">
-              Lieu de visite
+              <p><strong></strong> {{ centre.address }}</p>
             </button>
             </div>
 
@@ -37,6 +37,7 @@
           <li><strong>Sellerie :</strong> {{ car.seatMaterial }}</li>
           <li><strong>Année :</strong> {{ car.year }}</li>
           <li><strong>Propriétaires précédents :</strong> {{ car.previousOwners }}</li>
+          <li><strong>Carburant :</strong> {{ car.fuelType }}</li>
         </ul>
       </div>
 

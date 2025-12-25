@@ -2,6 +2,7 @@ import {Component, Injectable} from '@angular/core';
 import {environment} from '../../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {Centre} from '../../models/centre-model';
 
 // @ts-ignore
 @Component({
@@ -10,15 +11,6 @@ import {Observable} from 'rxjs';
   templateUrl: './centre-services.html',
   styleUrl: './centre-services.css',
 })
-export interface Centre {
-  id: number;
-  name: string;
-  address: string;
-  numeroTel: string;
-  latitude: number;
-  longitude: number;
-  horaire: string;
-}
 
 
 @Injectable({ providedIn: 'root' })

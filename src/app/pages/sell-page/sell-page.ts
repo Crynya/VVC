@@ -2,9 +2,10 @@
 import { Component } from '@angular/core';
 import { CarComponent } from '../../components/car-component/car-component';
 import { SidebarComponent } from '../../components/sidebar-component/sidebar-component';
-import { CarsServices, Car } from '../../services/cars-services/cars-services';
+import { CarsServices} from '../../services/cars-services/cars-services';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
+import {Car} from '../../models/car-model';
 
 @Component({
   selector: 'app-sell-page',

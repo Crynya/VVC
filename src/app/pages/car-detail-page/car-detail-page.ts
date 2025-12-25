@@ -1,11 +1,13 @@
 
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarsServices, Car } from '../../services/cars-services/cars-services';
+import { CarsServices} from '../../services/cars-services/cars-services';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {Observable, switchMap} from 'rxjs';
 import {environment} from '../../../environments/environment';
-import {Centre, CentreService} from '../../services/centre-services/centre-services';
+import {CentreService} from '../../services/centre-services/centre-services';
+import {Car} from '../../models/car-model';
+import {Centre} from '../../models/centre-model';
 
 @Component({
   selector: 'app-car-detail-page',

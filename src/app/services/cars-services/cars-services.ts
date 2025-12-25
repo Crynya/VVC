@@ -2,6 +2,7 @@ import {Component, Injectable} from '@angular/core';
 import {environment} from '../../../environments/environment.development';
 import {HttpClient} from '@angular/common/http';
 import {Observable, take} from 'rxjs';
+import {Car} from '../../models/car-model';
 
 // @ts-ignore
 @Component({
@@ -10,28 +11,6 @@ import {Observable, take} from 'rxjs';
   templateUrl: './cars-services.html',
   styleUrl: './cars-services.css',
 })
-export interface Car {
-
-  id: number;
-  brand: string;
-  model: string;
-  year: number;
-  km: number;
-  price: number;
-  fuelType: string;
-  previousOwners: number;
-  photoUrl: string;
-  transmission: string;
-  horsePower: number;
-  gearbox: string;
-  cylinders: number;
-  engineCapacity: number;
-  color: string;
-  seatMaterial: string;
-  description: string;
-  location: string;
-
-}
 
 @Injectable({ providedIn: 'root' })
 export class CarsServices {
