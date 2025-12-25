@@ -1,0 +1,149 @@
+
+/* Container principal */
+.car-detail-container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Bouton retour */
+.back-button {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Section principale */
+.car-top-section {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.car-image img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* ✅ Pas de déformation */
+  border-radius: 6px;
+  background: #f9f9f9;
+  padding: 10px;
+}
+
+/* Infos principales */
+.car-main-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.car-main-info h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.price {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #000; /* ✅ Noir */
+  margin-top: 5px;
+}
+
+.visit-button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.visit-button:hover {
+  background-color: #218838;
+}
+
+/* Sections infos */
+.car-info-section {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.car-info-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.car-info-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.car-info-section li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.car-info-section strong {
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .car-top-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .car-main-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+}
+
+.car-description-section {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.car-description-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.car-description-section p {
+  line-height: 1.6;
+}

@@ -1,5 +1,5 @@
 
-<div class="car-card">
+<div class="car-card" (click)="goToDetail(car.id)">
   <div class="car-image">
     <img [src]="environment.API_VVC.replace('/api','') + car.photoUrl" alt="{{ car.brand }} {{ car.model }}" />
   </div>

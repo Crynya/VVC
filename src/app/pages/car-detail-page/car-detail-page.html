@@ -1,0 +1,53 @@
+<div *ngIf="car$ | async as car"class="car-detail-container" >
+    <!-- Bouton retour -->
+    <a [routerLink]="['/sell']" class="back-button">← Retour</a>
+
+    <!-- Carte principale -->
+    <div class="car-main-card">
+      <!-- Image + infos principales -->
+      <div class="car-top-section">
+        <div class="car-image">
+          <img [src]="environment.API_VVC.replace('/api','') + car.photoUrl" alt="{{ car.brand }} {{ car.model }}" />
+        </div>
+        <div class="car-main-info">
+          <h1>{{ car.brand }} {{ car.model }}</h1>
+          <p class="price">€{{ car.price }}</p>
+          <!-- bouton permettant d'acceder a la carte-->
+          <button class="visit-button" (click)="openGoogleMaps(car.location)">
+            Lieu de visite
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Infos générales -->
+      <div class="car-info-section">
+        <h2>Infos générales</h2>
+        <ul>
+          <li><strong>Couleur :</strong> {{ car.color }}</li>
+          <li><strong>Kilométrage :</strong> {{ car.km }} km</li>
+          <li><strong>Sellerie :</strong> {{ car.seatMaterial }}</li>
+          <li><strong>Année :</strong> {{ car.year }}</li>
+          <li><strong>Propriétaires précédents :</strong> {{ car.previousOwners }}</li>
+        </ul>
+      </div>
+
+      <!-- Spécifications techniques -->
+      <div class="car-info-section">
+        <h2>Spécifications techniques</h2>
+        <ul>
+          <li><strong>Cylindres :</strong> {{ car.cylinders }}</li>
+          <li><strong>Puissance :</strong> {{ car.horsePower }} ch</li>
+          <li><strong>Transmission :</strong> {{ car.transmission }}</li>
+          <li><strong>Cylindrée :</strong> {{ car.engineCapacity }} L</li>
+          <li><strong>Boîte :</strong> {{ car.gearbox }}</li>
+        </ul>
+      </div>
+
+      <!-- ✅ Nouveau cadre : Description du vendeur -->
+      <div class="car-description-section">
+        <h2>Description du vendeur</h2>
+        <p>{{ car.description }}</p>
+      </div>
+    </div>
+  </div>
