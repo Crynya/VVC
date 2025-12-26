@@ -3,7 +3,7 @@ import {AdminHeaderComponent} from "../../admin-components/admin-header-componen
 import {Observable} from 'rxjs';
 import {Centre} from '../../models/centre-model';
 import {CentreService} from '../../services/centre-services/centre-services';
-import {AsyncPipe, NgForOf} from '@angular/common';
+import {AsyncPipe, NgForOf, NgIf} from '@angular/common';
 import {AdminCentreAddComponent} from '../../admin-components/admin-centre-add-component/admin-centre-add-component';
 import {AdminCentreComponent} from '../../admin-components/admin-centre-component/admin-centre-component';
 import {AdminUserComponent} from '../../admin-components/admin-user-component/admin-user-component';
@@ -12,6 +12,7 @@ import {AdminUserComponent} from '../../admin-components/admin-user-component/ad
   selector: 'app-admin-centres-pages',
   imports: [
     AdminHeaderComponent,
+    NgIf,
     NgForOf,
     AsyncPipe,
     AdminCentreAddComponent,

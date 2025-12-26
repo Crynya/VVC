@@ -1,8 +1,7 @@
 
 .user-card {
   display: flex;
-  justify-content: space-between; /* Info à gauche, actions à droite */
-  align-items: center;
+  flex-direction: column; /* ✅ Colonne pour infos + actions + formulaire */
   background-color: #ffffff;
   margin-bottom: 15px;
   padding: 15px;
@@ -15,18 +14,13 @@
   transform: scale(1.02);
 }
 
-/* ✅ Zone info */
 .user-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  margin-bottom: 10px;
 }
 
 .user-info h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.3em;
-  color: #333;
+  margin: 0 0 6px 0;
+  font-size: 1.2em;
 }
 
 .user-info p {
@@ -35,10 +29,10 @@
   color: #555;
 }
 
-/* ✅ Zone des actions */
 .user-actions {
   display: flex;
   gap: 10px;
+  margin-bottom: 10px; /* ✅ Pour séparer des infos et du formulaire */
 }
 
 .user-actions button {
@@ -68,4 +62,9 @@
 
 .btn-delete:hover {
   background-color: #a71d2a;
+}
+
+/* ✅ Formulaire affiché en dessous */
+.edit-form {
+  margin-top: 10px;
 }

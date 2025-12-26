@@ -22,27 +22,16 @@ export class AdminUserModifierComponent {
   constructor(private fb: FormBuilder, private userService: UserServices) {}
 
 
-  ngOnInit() {
-    this.editForm = this.fb.group({
-      nom: [''],
-      prenom: [''],
-      email: [''],
-      password: [''],
-      role: ['']
-    });
-  }
 
-  ngOnChanges() {
-    if (this.user && this.editForm) {
-      console.log('User reçu :', this.user);
-      this.editForm.patchValue({
-        nom: this.user.nom,
-        prenom: this.user.prenom,
-        email: this.user.email,
-        password: this.user.password,
-        role: this.user.role
-      });
-    }
+  ngOnInit() {
+    // ✅ Pré-remplir directement avec les données de l'utilisateur
+    this.editForm = this.fb.group({
+      nom: [this.user.nom],
+      prenom: [this.user.prenom],
+      email: [this.user.email],
+      password: [this.user.password],
+      role: [this.user.role]
+    });
   }
 
 
@@ -58,6 +47,4 @@ export class AdminUserModifierComponent {
   cancel() {
     this.cancelEdit.emit();
   }
-
-
 }

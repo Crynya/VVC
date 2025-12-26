@@ -1,14 +1,26 @@
 
 <app-admin-header-component></app-admin-header-component>
 
-<div class="user-list">
-  <h2>Gestion des Utilisateurs (Rôle : User)</h2>
+<div class="centre-list">
+  <h2>Gestion des Centres</h2>
+  <div class="add-centre-container">
+  <!-- Bouton pour afficher/masquer le formulaire d'ajout -->
+  <button class="btn-add" (click)="toggleAdd()">Ajouter un centre</button>
 
-  <div *ngFor="let user of users$ | async">
-    <app-admin-user-component
-      [user]="user"
-      (userUpdated)="refreshUsers()"
-      (userDeleted)="refreshUsers()">
-    </app-admin-user-component>
+  <!-- Formulaire d'ajout -->
+  <div *ngIf="isAdding">
+    <app-admin-centre-add-component
+      (centreCreated)="handleCentreCreated()"
+      (cancelAdd)="toggleAdd()">
+    </app-admin-centre-add-component>
+  </div>
+</div>
+  <!-- Liste des centres -->
+  <div *ngFor="let centre of centres$ | async">
+    <app-admin-centre-component
+      [centre]="centre"
+      (centreUpdated)="refreshList()"
+      (centreDeleted)="refreshList()">
+    </app-admin-centre-component>
   </div>
 </div>
