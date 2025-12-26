@@ -22,6 +22,8 @@ export class AdminUserComponent {
 
   isEditing = false;
 
+  constructor(private userService: UserServices) {}
+
   toggleEdit() {
     this.isEditing = !this.isEditing;
   }
@@ -37,7 +39,11 @@ export class AdminUserComponent {
 
   deleteUser() {
     if (confirm('Voulez-vous vraiment supprimer cet utilisateur ?')) {
-      this.userDeleted.emit();
+      this.userService.deleteUser(this.user.id).subscribe(() => {
+        alert('Utilisateur supprimé avec succès');
+        this.userDeleted.emit(); // ✅ Pour rafraîchir la liste
+      });
     }
   }
+
 }

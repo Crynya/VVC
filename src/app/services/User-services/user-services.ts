@@ -22,7 +22,7 @@ export class UserServices {
   }
 
   register(user: any): Observable<any> {
-    return this.http.post(`${this.apiUserUrl}/users`, user);
+    return this.http.post(`${this.apiUrl}/users`, user);
   }
 
   updateUser(id: number, user: User): Observable<User> {
