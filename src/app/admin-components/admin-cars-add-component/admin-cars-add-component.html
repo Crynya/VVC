@@ -1,0 +1,72 @@
+
+<div class="edit-form">
+  <form [formGroup]="addForm" (ngSubmit)="createCar()">
+
+    <label for="brand">Marque</label>
+    <input id="brand" formControlName="brand" placeholder="Exemple : BMW, Mercedes, ... "/>
+
+    <label for="model">Modèle</label>
+    <input id="model" formControlName="model" placeholder="Exemple : CS220d, e30 320i, ... "/>
+
+    <label for="year">Année</label>
+    <input id="year" formControlName="year" type="number" />
+
+    <label for="km">Kilométrage (km)</label>
+    <input id="km" formControlName="km" type="number" />
+
+    <label for="price">Prix (€)</label>
+    <input id="price" formControlName="price" type="number" />
+
+    <label for="fuelType">Type de carburant</label>
+    <input id="fuelType" formControlName="fuelType" placeholder="Essence ou Diesel" />
+
+    <label for="previousOwners">Nombre de propriétaires précédents</label>
+    <input id="previousOwners" formControlName="previousOwners" type="number" />
+
+    <label for="photoUrl">URL de la photo</label>
+    <input id="photoUrl" formControlName="photoUrl" placeholder="Exemple : /images/bmw-x5-2021.png" />
+
+    <label for="transmission">Transmission</label>
+    <select id="transmission" formControlName="transmission">
+      <option value="Traction">Traction</option>
+      <option value="Propulsion">Propulsion</option>
+      <option value="4x4">4x4</option>
+    </select>
+
+    <label for="horsePower">Puissance (ch)</label>
+    <input id="horsePower" formControlName="horsePower" type="number" />
+
+    <label for="gearbox">Boîte de vitesses</label>
+    <select id="gearbox" formControlName="gearbox">
+      <option value="Manuelle">Manuelle</option>
+      <option value="Automatique">Automatique</option>
+    </select>
+
+    <label for="cylinders">Nombre de cylindres</label>
+    <input id="cylinders" formControlName="cylinders" type="number" />
+
+    <label for="engineCapacity">Cylindrée (L)</label>
+    <input id="engineCapacity" formControlName="engineCapacity" type="number" step="0.1" />
+
+    <label for="color">Couleur</label>
+    <input id="color" formControlName="color" placeholder="Exemple : Noir, Rouge"/>
+
+    <label for="seatMaterial">Matériau des sièges</label>
+    <input id="seatMaterial" formControlName="seatMaterial" placeholder="Exemple : Cuir, Tissu" />
+
+    <label for="location">Localisation</label>
+    <select id="location" formControlName="location">
+      <option value="Mons">Mons</option>
+      <option value="Namur">Namur</option>
+      <option value="Bruxelles">Bruxelles</option>
+    </select>
+
+    <label for="description">Description</label>
+    <textarea id="description" formControlName="description" placeholder="Descriptif bref et complet"></textarea>
+
+    <div class="form-actions">
+      <button type="submit" class="btn-save">Créer</button>
+      <button type="button" class="btn-cancel" (click)="cancel()">Annuler</button>
+    </div>
+  </form>
+</div>

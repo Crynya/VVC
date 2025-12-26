@@ -4,6 +4,18 @@
 <div class="main-container">
   <section class="car-list">
     <h2>Gestion des voitures</h2>
+
+    <div class="add-car-container">
+      <button class="btn-add" (click)="toggleAdd()">➕ Ajouter une voiture</button>
+      <!-- ✅ Formulaire affiché si isAdding -->
+      <div *ngIf="isAdding">
+        <app-admin-cars-add-component
+          (carCreated)="handleCarCreated()"
+          (cancelAdd)="toggleAdd()">
+        </app-admin-cars-add-component>
+      </div>
+    </div>
+
     <div *ngFor="let car of cars$ | async">
       <!-- ✅ Utilisation du nouveau composant Admin -->
       <app-admin-car

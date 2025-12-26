@@ -12,4 +12,27 @@
 .car-list h2 {
   margin-bottom: 15px;
 }
+.add-car-container {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
+.btn-add {
+  background-color: #28a745; /* Vert */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #218838; /* Vert plus foncé au survol */
+}
