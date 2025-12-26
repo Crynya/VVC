@@ -1,0 +1,14 @@
+
+<div class="edit-form">
+  <form [formGroup]="editForm" (ngSubmit)="saveChanges()">
+    <input formControlName="brand" placeholder="Marque" />
+    <input formControlName="model" placeholder="Modèle" />
+    <input formControlName="price" type="number" placeholder="Prix" />
+    <input formControlName="km" type="number" placeholder="Kilométrage" />
+    <input formControlName="year" type="number" placeholder="Année" />
+    <div class="form-actions">
+      <button type="submit" class="btn-save">Enregistrer</button>
+      <button type="button" class="btn-cancel" (click)="cancel()">Annuler</button>
+    </div>
+  </form>
+</div>

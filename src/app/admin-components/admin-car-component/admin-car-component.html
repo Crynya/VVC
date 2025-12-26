@@ -10,9 +10,17 @@
     <p><strong>Année :</strong> {{ car.year }}</p>
   </div>
 
-  <!-- ✅ Boutons d’action -->
   <div class="car-actions">
-    <button class="btn-edit" (click)="editCar(car.id)">Modifier</button>
+    <button class="btn-edit" (click)="toggleEdit()">Modifier</button>
     <button class="btn-delete" (click)="deleteCar(car.id)">Supprimer</button>
   </div>
+</div>
+
+<!-- ✅ Sous-composant affiché si isEditing -->
+<div *ngIf="isEditing">
+  <app-admin-cars-modifier-component
+    [car]="car"
+    (carUpdated)="handleUpdate()"
+    (cancelEdit)="handleCancel()">
+  </app-admin-cars-modifier-component>
 </div>

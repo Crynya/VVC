@@ -27,6 +27,4 @@ export class AdminCarPages {
   refreshList(): void {
     this.cars$ = this.carService.getAllCars();
   }
-
-
 }

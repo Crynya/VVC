@@ -6,7 +6,11 @@
     <h2>Gestion des voitures</h2>
     <div *ngFor="let car of cars$ | async">
       <!-- ✅ Utilisation du nouveau composant Admin -->
-      <app-admin-car [car]="car" (carDeleted)="refreshList()"></app-admin-car>
+      <app-admin-car
+        [car]="car"
+        (carDeleted)="refreshList()"
+        (carUpdated)="refreshList()">
+      </app-admin-car>
     </div>
   </section>
 </div>
