@@ -1,0 +1,41 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+ul {
+  text-align: left;
+  display: inline-block;
+  margin: 15px auto;
+  padding-left: 20px;
+  color: #444;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #007BFF;
+}
