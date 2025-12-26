@@ -1,0 +1,23 @@
+<div class="centre-card">
+  <div class="centre-info">
+    <h3>{{ centre.name }}</h3>
+    <p><strong>Adresse :</strong> {{ centre.address }}</p>
+    <p><strong>Téléphone :</strong> {{ centre.numeroTel }}</p>
+    <p><strong>Horaire :</strong> {{ centre.horaire }}</p>
+    <p><strong>Coordonnées :</strong> Lat {{ centre.latitude }}, Long {{ centre.longitude }}</p>
+  </div>
+
+  <div class="centre-actions">
+    <button class="btn-edit" (click)="toggleEdit()">Modifier</button>
+    <button class="btn-delete" (click)="deleteCentre(centre.id)">Supprimer</button>
+  </div>
+</div>
+
+<!-- ✅ Sous-composant affiché si isEditing -->
+<div *ngIf="isEditing">
+  <app-admin-centre-modifier-component
+    [centre]="centre"
+    (centreUpdated)="handleUpdate()"
+    (cancelEdit)="handleCancel()">
+  </app-admin-centre-modifier-component>
+</div>

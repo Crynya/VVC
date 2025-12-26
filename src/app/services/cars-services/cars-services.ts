@@ -4,14 +4,6 @@ import {HttpClient} from '@angular/common/http';
 import {Observable, take} from 'rxjs';
 import {Car} from '../../models/car-model';
 
-// @ts-ignore
-@Component({
-  selector: 'app-cars-services',
-  imports: [],
-  templateUrl: './cars-services.html',
-  styleUrl: './cars-services.css',
-})
-
 @Injectable({ providedIn: 'root' })
 export class CarsServices {
   private apiUrl = `${environment.API_VVC}/cars`;

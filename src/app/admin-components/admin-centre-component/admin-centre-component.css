@@ -1,0 +1,71 @@
+
+.centre-card {
+  display: flex;
+  justify-content: space-between; /* ✅ Info à gauche, actions à droite */
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.centre-card:hover {
+  transform: scale(1.02);
+}
+
+/* ✅ Zone info */
+.centre-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.centre-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.3em;
+  color: #333;
+}
+
+.centre-info p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* ✅ Zone des actions */
+.centre-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.centre-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Bouton Modifier */
+.btn-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #0056b3;
+}
+
+/* Bouton Supprimer */
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #a71d2a;
+}

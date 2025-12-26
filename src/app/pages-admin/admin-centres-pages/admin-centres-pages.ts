@@ -1,14 +1,44 @@
 import { Component } from '@angular/core';
 import {AdminHeaderComponent} from "../../admin-components/admin-header-component/admin-header-component";
+import {Observable} from 'rxjs';
+import {Centre} from '../../models/centre-model';
+import {CentreService} from '../../services/centre-services/centre-services';
+import {AsyncPipe, NgForOf} from '@angular/common';
+import {AdminCentreAddComponent} from '../../admin-components/admin-centre-add-component/admin-centre-add-component';
+import {AdminCentreComponent} from '../../admin-components/admin-centre-component/admin-centre-component';
+import {AdminUserComponent} from '../../admin-components/admin-user-component/admin-user-component';
 
 @Component({
   selector: 'app-admin-centres-pages',
-    imports: [
-        AdminHeaderComponent
-    ],
+  imports: [
+    AdminHeaderComponent,
+    NgForOf,
+    AsyncPipe,
+    AdminCentreAddComponent,
+    AdminCentreComponent,
+    AdminUserComponent
+  ],
   templateUrl: './admin-centres-pages.html',
   styleUrl: './admin-centres-pages.css',
 })
 export class AdminCentresPages {
+  centres$: Observable<Centre[]>;
+  isAdding = false;
 
+  constructor(private centreService: CentreService) {
+    this.centres$ = this.centreService.getAllCentres();
+  }
+
+  refreshList(): void {
+    this.centres$ = this.centreService.getAllCentres();
+  }
+
+  toggleAdd(): void {
+    this.isAdding = !this.isAdding;
+  }
+
+  handleCentreCreated(): void {
+    this.isAdding = false;
+    this.refreshList();
+  }
 }

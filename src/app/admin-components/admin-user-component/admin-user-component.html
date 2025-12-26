@@ -1,0 +1,22 @@
+
+<div class="user-card">
+  <div class="user-info" *ngIf="!isEditing">
+    <h3>{{ user.nom }} {{ user.prenom }}</h3>
+    <p>Email : {{ user.email }}</p>
+    <p>Rôle : {{ user.role }}</p>
+  </div>
+
+  <div class="user-actions" *ngIf="!isEditing">
+    <button class="btn-edit" (click)="toggleEdit()">Modifier</button>
+    <button class="btn-delete" (click)="deleteUser()">Supprimer</button>
+  </div>
+
+  <!-- ✅ Formulaire affiché si isEditing -->
+  <div *ngIf="isEditing">
+    <app-admin-user-modifier-component
+      [user]="user"
+      (userUpdated)="handleUpdate()"
+      (cancelEdit)="handleCancel()">
+    </app-admin-user-modifier-component>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+
+<div class="edit-form">
+  <form [formGroup]="editForm" (ngSubmit)="updateUser()">
+    <label>Nom</label>
+    <input formControlName="nom" />
+
+    <label>Prénom</label>
+    <input formControlName="prenom" />
+
+    <label>Email</label>
+    <input formControlName="email" />
+
+    <label>Password</label>
+    <input formControlName="password" type="password" />
+
+    <label>Rôle</label>
+    <select formControlName="role">
+      <option value="Admin">Admin</option>
+      <option value="User">User</option>
+    </select>
+
+    <div class="form-actions">
+      <button type="submit" class="btn-save">Enregistrer</button>
+      <button type="button" class="btn-cancel" (click)="cancel()">Annuler</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,37 @@
+
+/* ✅ Conteneur principal */
+.user-list {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f6f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ✅ Titre */
+.user-list h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ✅ Liste des cartes */
+.user-list > div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .user-list {
+    padding: 15px;
+  }
+
+  .user-list h2 {
+    font-size: 1.4em;
+  }
+}

@@ -31,7 +31,7 @@ export class ConnectionPage {
         localStorage.setItem('surname', res.surname);//  Stocke le rôle (prenom)
 
         if (res.role === 'Admin') {
-          this.router.navigate(['/admin']);
+          this.router.navigate(['/admin/voiture']);
         } else {
           this.router.navigate(['/sell']);
         }

@@ -56,9 +56,9 @@
 
     <label for="location">Localisation</label>
     <select id="location" formControlName="location">
-      <option value="Mons">Mons</option>
-      <option value="Namur">Namur</option>
-      <option value="Bruxelles">Bruxelles</option>
+      <option *ngFor="let centre of centres$ | async" [value]="centre.name">
+        {{ centre.name }}
+      </option>
     </select>
 
     <label for="description">Description</label>

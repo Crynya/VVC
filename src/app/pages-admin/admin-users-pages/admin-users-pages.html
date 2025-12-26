@@ -1,1 +1,14 @@
+
 <app-admin-header-component></app-admin-header-component>
+
+<div class="user-list">
+  <h2>Gestion des Utilisateurs (Rôle : User)</h2>
+
+  <div *ngFor="let user of users$ | async">
+    <app-admin-user-component
+      [user]="user"
+      (userUpdated)="refreshUsers()"
+      (userDeleted)="refreshUsers()">
+    </app-admin-user-component>
+  </div>
+</div>
