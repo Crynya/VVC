@@ -3,10 +3,7 @@ import {AdminHeaderComponent} from "../../admin-components/admin-header-componen
 import {User} from '../../models/user-model';
 import {UserServices} from '../../services/User-services/user-services';
 import {AdminUserComponent} from '../../admin-components/admin-user-component/admin-user-component';
-import {
-  AdminUserModifierComponent
-} from '../../admin-components/admin-user-modifier-component/admin-user-modifier-component';
-import {AsyncPipe, NgForOf, NgIf} from '@angular/common';
+import {AsyncPipe, NgForOf} from '@angular/common';
 import {map, Observable} from 'rxjs';
 
 @Component({
@@ -14,9 +11,7 @@ import {map, Observable} from 'rxjs';
   imports: [
     AdminHeaderComponent,
     AdminUserComponent,
-    AdminUserModifierComponent,
     NgForOf,
-    NgIf,
     AsyncPipe
   ],
   templateUrl: './admin-users-pages.html',

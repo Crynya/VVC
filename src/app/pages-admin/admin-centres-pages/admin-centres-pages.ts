@@ -17,7 +17,6 @@ import {AdminUserComponent} from '../../admin-components/admin-user-component/ad
     AsyncPipe,
     AdminCentreAddComponent,
     AdminCentreComponent,
-    AdminUserComponent
   ],
   templateUrl: './admin-centres-pages.html',
   styleUrl: './admin-centres-pages.css',
