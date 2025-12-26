@@ -1,0 +1,18 @@
+
+<div class="car-card">
+  <div class="car-image">
+    <img [src]="environment.API_VVC.replace('/api','') + car.photoUrl" alt="{{ car.brand }} {{ car.model }}" />
+  </div>
+  <div class="car-info">
+    <h3>{{ car.brand }} {{ car.model }}</h3>
+    <p><strong>Prix :</strong> €{{ car.price }}</p>
+    <p><strong>Kilométrage :</strong> {{ car.km }} km</p>
+    <p><strong>Année :</strong> {{ car.year }}</p>
+  </div>
+
+  <!-- ✅ Boutons d’action -->
+  <div class="car-actions">
+    <button class="btn-edit" (click)="editCar(car.id)">Modifier</button>
+    <button class="btn-delete" (click)="deleteCar(car.id)">Supprimer</button>
+  </div>
+</div>

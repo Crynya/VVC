@@ -1,0 +1,87 @@
+
+.car-card {
+  display: flex;
+  justify-content: space-between; /* ✅ Pour séparer info et actions */
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.car-card:hover {
+  transform: scale(1.02);
+}
+
+.car-image {
+  width: 150px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.car-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car-info {
+  flex: 1; /* ✅ Prend l’espace disponible */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.car-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.2em;
+}
+
+.car-info p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* ✅ Zone des boutons */
+.car-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.car-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Bouton Modifier */
+.btn-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #0056b3;
+}
+
+/* Bouton Supprimer */
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #a71d2a;
+}

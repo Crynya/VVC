@@ -14,7 +14,7 @@
   font-weight: bold;
 }
 
-/* Liens au centre */
+/* Navigation au centre */
 .nav-bar ul {
   list-style: none;
   display: flex;
@@ -31,35 +31,11 @@
 }
 
 .nav-bar a:hover {
-  color: #007bff;
+  color: #007bff; /* Surbrillance au survol */
 }
 
+/* ✅ Lien actif (optionnel, si tu veux garder un indicateur) */
 .nav-bar a.active {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-/* Boutons User/Admin */
-.role-switch {
-  display: flex;
-  gap: 20px;
-}
-
-.role-switch span {
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.role-switch span:hover {
-  background-color: #333;
-  color: #007bff;
-}
-
-.role-switch span.active {
   color: #007bff;
   text-decoration: underline;
 }

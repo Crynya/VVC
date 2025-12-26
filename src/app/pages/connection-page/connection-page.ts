@@ -29,7 +29,13 @@ export class ConnectionPage {
         localStorage.setItem('token', res.token); //  Stocke le token
         localStorage.setItem('role', res.role);//  Stocke le rôle (Admin/User)
         localStorage.setItem('surname', res.surname);//  Stocke le rôle (prenom)
-        this.router.navigate(['/sell']);
+
+        if (res.role === 'Admin') {
+          this.router.navigate(['/admin']);
+        } else {
+          this.router.navigate(['/sell']);
+        }
+
       },
       error: () => alert('Email ou mot de passe incorrect')
     });

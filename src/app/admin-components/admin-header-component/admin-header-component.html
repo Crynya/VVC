@@ -1,0 +1,17 @@
+
+<header class="header">
+  <!-- ✅ Logo à gauche -->
+  <div class="logo">VendezVotreChar</div>
+
+  <!-- ✅ Liens cliquables au centre -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a routerLink="/admin/voiture" routerLinkActive="active">Gestion Voiture</a></li>
+      <li><a routerLink="/admin/centre" routerLinkActive="active">Gestion Centre</a></li>
+      <li><a routerLink="/admin/user" routerLinkActive="active">Gestion User</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Déconnexion à droite -->
+  <div class="logout" *ngIf="isLoggedIn" (click)="logout()">Déconnexion</div>
+</header>
