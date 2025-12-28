@@ -7,8 +7,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-sidebar-component',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './Sidebar-component.html',
-  styleUrls: ['./Sidebar-component.css']
+  templateUrl: './sidebar-component.html',
+  styleUrls: ['./sidebar-component.css']
 })
 export class SidebarComponent {
   @Output() filtersChanged = new EventEmitter<any>();

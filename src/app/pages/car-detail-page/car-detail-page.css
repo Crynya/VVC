@@ -37,7 +37,7 @@
   max-width: 420px;
   width: 100%;
   height: auto;
-  object-fit: contain; /* ✅ Pas de déformation */
+  object-fit: contain;
   border-radius: 6px;
   background: #f9f9f9;
   padding: 10px;
@@ -62,7 +62,7 @@
 .price {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #000; /* ✅ Noir */
+  color: #000;
   margin-top: 5px;
   margin-bottom: 1rem;
 }

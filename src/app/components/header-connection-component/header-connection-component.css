@@ -5,14 +5,20 @@
   align-items: center;
   background-color: #222;
   color: white;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
+  height: 5rem;
+
 }
 
 /* Logo à gauche */
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
+
+.logo img {
+  max-height: 10REM;
+  max-width: 10REM;
+  object-fit: contain;
+  display: block;
 }
+
 
 /* Liens au centre */
 .nav-bar ul {

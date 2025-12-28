@@ -6,7 +6,6 @@ import {CentreService} from '../../services/centre-services/centre-services';
 import {AsyncPipe, NgForOf, NgIf} from '@angular/common';
 import {AdminCentreAddComponent} from '../../admin-components/admin-centre-add-component/admin-centre-add-component';
 import {AdminCentreComponent} from '../../admin-components/admin-centre-component/admin-centre-component';
-import {AdminUserComponent} from '../../admin-components/admin-user-component/admin-user-component';
 
 @Component({
   selector: 'app-admin-centres-pages',

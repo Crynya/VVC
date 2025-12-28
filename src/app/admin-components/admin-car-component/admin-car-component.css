@@ -1,7 +1,7 @@
 
 .car-card {
   display: flex;
-  justify-content: space-between; /* ✅ Pour séparer info et actions */
+  justify-content: space-between; /* Pour séparer info et actions */
   align-items: center;
   background-color: white;
   margin-bottom: 15px;
@@ -34,7 +34,7 @@
 }
 
 .car-info {
-  flex: 1; /* ✅ Prend l’espace disponible */
+  flex: 1; /* Prend l’espace disponible */
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -51,7 +51,7 @@
   color: #555;
 }
 
-/* ✅ Zone des boutons */
+/* Zone des boutons */
 .car-actions {
   display: flex;
   gap: 10px;

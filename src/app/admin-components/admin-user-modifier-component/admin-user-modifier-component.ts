@@ -24,7 +24,7 @@ export class AdminUserModifierComponent {
 
 
   ngOnInit() {
-    // ✅ Pré-remplir directement avec les données de l'utilisateur
+    //  Pré-remplir directement avec les données de l'utilisateur
     this.editForm = this.fb.group({
       nom: [this.user.nom],
       prenom: [this.user.prenom],

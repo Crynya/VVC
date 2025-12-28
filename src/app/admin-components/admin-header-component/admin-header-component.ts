@@ -31,7 +31,7 @@ export class AdminHeaderComponent
     localStorage.removeItem('role');
     localStorage.removeItem('surname');
     this.isLoggedIn = false;
-    this.router.navigate(['/']); // ✅ Retour à la page de connexion
+    this.router.navigate(['/']); // Retour à la page de connexion
   }
 
 }

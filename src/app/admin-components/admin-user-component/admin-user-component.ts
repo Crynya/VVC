@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {User} from '../../models/user-model';
-import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 import {UserServices} from '../../services/User-services/user-services';
 import {AdminUserModifierComponent} from '../admin-user-modifier-component/admin-user-modifier-component';
 import {NgIf} from '@angular/common';

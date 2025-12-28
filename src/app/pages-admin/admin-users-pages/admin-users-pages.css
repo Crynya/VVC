@@ -1,5 +1,5 @@
 
-/* ✅ Conteneur principal */
+/* Conteneur principal */
 .user-list {
   max-width: 1200px;
   margin: 20px auto;
@@ -9,7 +9,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* ✅ Titre */
+/* Titre */
 .user-list h2 {
   font-size: 1.8em;
   font-weight: bold;
@@ -18,14 +18,14 @@
   text-align: center;
 }
 
-/* ✅ Liste des cartes */
+/* Liste des cartes */
 .user-list > div {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* ✅ Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .user-list {
     padding: 15px;

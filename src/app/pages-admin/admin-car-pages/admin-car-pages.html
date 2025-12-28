@@ -7,7 +7,7 @@
 
     <div class="add-car-container">
       <button class="btn-add" (click)="toggleAdd()">➕ Ajouter une voiture</button>
-      <!-- ✅ Formulaire affiché si isAdding -->
+      <!-- Formulaire affiché si isAdding -->
       <div *ngIf="isAdding">
         <app-admin-cars-add-component
           (carCreated)="handleCarCreated()"
@@ -17,7 +17,7 @@
     </div>
 
     <div *ngFor="let car of cars$ | async">
-      <!-- ✅ Utilisation du nouveau composant Admin -->
+      <!-- Utilisation du nouveau composant Admin -->
       <app-admin-car
         [car]="car"
         (carDeleted)="refreshList()"

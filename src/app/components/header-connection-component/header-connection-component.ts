@@ -2,7 +2,8 @@ import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header-connection-component',
-  imports: [],
+  imports: [
+  ],
   templateUrl: './header-connection-component.html',
   styleUrl: './header-connection-component.css',
 })

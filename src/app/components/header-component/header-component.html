@@ -1,6 +1,8 @@
 
 <header class="header">
-  <div class="logo">VendezVotreChar</div>
+  <div class="logo">
+    <img src="/logo.png" alt="Logo" />
+  </div>
 
   <nav class="nav-bar">
     <ul>
@@ -10,7 +12,7 @@
     </ul>
   </nav>
 
-  <!-- ✅ Zone compte -->
+  <!-- Zone compte -->
   <div class="user-menu" *ngIf="isLoggedIn">
     <span (click)="toggleMenu()">{{ userName }} ▼</span>
     <ul *ngIf="menuOpen" class="dropdown">

@@ -1,7 +1,7 @@
 
 .centre-card {
   display: flex;
-  justify-content: space-between; /* ✅ Info à gauche, actions à droite */
+  justify-content: space-between; /*  Info à gauche, actions à droite */
   align-items: center;
   background-color: white;
   margin-bottom: 15px;
@@ -15,7 +15,7 @@
   transform: scale(1.02);
 }
 
-/* ✅ Zone info */
+/* Zone info */
 .centre-info {
   flex: 1;
   display: flex;
@@ -35,7 +35,7 @@
   color: #555;
 }
 
-/* ✅ Zone des actions */
+/* Zone des actions */
 .centre-actions {
   display: flex;
   gap: 10px;

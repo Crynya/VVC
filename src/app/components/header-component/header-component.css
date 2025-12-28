@@ -5,12 +5,15 @@
   align-items: center;
   background-color: #222;
   color: white;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
+  height: 5rem;
 }
 
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
+.logo img {
+  max-height: 10REM;
+  max-width: 10REM;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-bar ul {
@@ -32,7 +35,12 @@
   color: #007bff;
 }
 
-/* ✅ Zone utilisateur */
+.nav-bar a.active {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Zone utilisateur */
 .user-menu {
   position: relative;
   cursor: pointer;

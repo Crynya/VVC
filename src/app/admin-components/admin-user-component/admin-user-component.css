@@ -1,7 +1,7 @@
 
 .user-card {
   display: flex;
-  flex-direction: column; /* ✅ Colonne pour infos + actions + formulaire */
+  flex-direction: column; /*  Colonne pour infos + actions + formulaire */
   background-color: #ffffff;
   margin-bottom: 15px;
   padding: 15px;
@@ -32,7 +32,7 @@
 .user-actions {
   display: flex;
   gap: 10px;
-  margin-bottom: 10px; /* ✅ Pour séparer des infos et du formulaire */
+  margin-bottom: 10px; /* Pour séparer des infos et du formulaire */
 }
 
 .user-actions button {
@@ -64,7 +64,7 @@
   background-color: #a71d2a;
 }
 
-/* ✅ Formulaire affiché en dessous */
+/* Formulaire affiché en dessous */
 .edit-form {
   margin-top: 10px;
 }

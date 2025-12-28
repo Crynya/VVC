@@ -5,20 +5,24 @@
   align-items: center;
   background-color: #222;
   color: white;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
+  height: 5rem;
 }
 
 /* Logo à gauche */
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
+.logo img {
+  max-height: 10REM;
+  max-width: 10REM;
+  object-fit: contain;
+  display: block;
 }
+
 
 /* Navigation au centre */
 .nav-bar ul {
   list-style: none;
   display: flex;
-  gap: 40px; /* Plus d’espace entre les liens */
+  gap: 40px;
   margin: 0;
   padding: 0;
 }
@@ -31,10 +35,10 @@
 }
 
 .nav-bar a:hover {
-  color: #007bff; /* Surbrillance au survol */
+  color: #007bff;
 }
 
-/* ✅ Lien actif (optionnel, si tu veux garder un indicateur) */
+/*Lien actif */
 .nav-bar a.active {
   color: #007bff;
   text-decoration: underline;

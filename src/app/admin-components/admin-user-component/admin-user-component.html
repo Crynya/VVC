@@ -11,7 +11,7 @@
     <button class="btn-delete" (click)="deleteUser()">Supprimer</button>
   </div>
 
-  <!-- ✅ Formulaire affiché si isEditing -->
+  <!--  Formulaire affiché si isEditing -->
   <div *ngIf="isEditing">
     <app-admin-user-modifier-component
       [user]="user"

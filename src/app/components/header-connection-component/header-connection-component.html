@@ -1,8 +1,13 @@
 <header class="header">
-  <div class="logo">VendezVotreChar</div>
+
+  <div class="logo">
+    <img src="/logo.png" alt="Logo" />
+  </div>
+
 
   <nav class="role-switch">
     <span (click)="onRoleChange('User')" [class.active]="selectedRole === 'User'">User</span>
     |
     <span (click)="onRoleChange('Admin')" [class.active]="selectedRole === 'Admin'">Admin</span>
   </nav>
+</header>
